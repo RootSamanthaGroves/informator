@@ -1,0 +1,114 @@
+<div class="add">
+
+    <div class="container">
+
+        <h1>Dodaj </h1>
+
+        <h3>{{message}}</h3>
+
+
+        <div class="container-fluid">
+            <div class="row content">
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-4">
+                        <button type="button" ng-click="setEdit(false)"
+                                class="btn btn-info btn-lg btn-block" data-toggle="modal"
+                                data-target="#addCar">
+                            <p style="font-size: 30px"> Dodaj Stanowisko </p>
+                            <span class="glyphicon glyphicon-arrow-down"></span>
+                        </button>
+                        <br>
+                    </div>
+                    <div class=" col-lg-8 col-md-10 col-sm-8 col-md-offset-1 col-lg-offset-2 col-sm-offset-2"
+                         align="left">
+                        <div class="col-md-4" ng-repeat="c in eque |orderBy:'id'">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <h5 align="center">
+                                        {{ c.name }}
+                                    </h5>
+                                </div>
+                                <div class="panel-body">
+                                    <img class="img-rounded center-block"
+                                         ng-src="data:image/JPEG;base64,{{c.image}}"
+                                         style=" max-height: 20%; width: 90%;">
+                                    <br/>
+                                    <div class="col-md-12" style="text-align: center">
+                                        {{ c.description }}
+
+
+                                        <button type="button" alt="{{c.id}}" ng-click="delete(c.id)"
+                                                class="btn btn-primary btn btn-danger"
+                                                data-toggle="modal">
+                                            <span class="glyphicon glyphicon-trash"></span>
+                                        </button>
+                                        </td>
+                                        <td>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Dodawanie -->
+    <div class="modal fade" id="addCar" tabindex="-1" role="dialog"
+         aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle2"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" onclick="document.getElementById('delPhoto').click()">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h3 align="center">Dodaj sprzęt</h3>
+                    <form class="row">
+                        <br/>
+                        <legend><i>Dodaj zdjęcie </i></legend>
+                        <div class="row" align="center">
+                            <div class="form-group col-sm-4 col-sm-offset-4">
+                                <div class="img-picker" align="center"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Nazwa:</label>
+                            <input id="nazwa" type="text" class="form-control" maxLength="20" name="nazwaEQ"
+                                   value="Nazwa"
+                                   placeholder="Nazwa" ng-model="nazwaEQ">
+                        </div>
+                        <div class="form-group">
+                            <label>Opis:</label>
+                            <input id="opis" type="text" class="form-control" maxLength="20" name="opisEQ"
+                                   value="Opis"
+                                   placeholder="Opis" ng-model="opisEQ">
+                        </div>
+
+
+
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal"
+                        onclick="document.getElementById('delPhoto').click()">Zamknij
+                </button>
+
+                <button id="submit" type="submit" class="btn btn-success addCar" ng-click="saveEQ()">
+                    Zapisz w bazie
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+</div>
