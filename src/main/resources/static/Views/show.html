@@ -1,0 +1,24 @@
+<div class="show">
+
+    <div class="container">
+
+        <h1>Wyświetl</h1>
+
+        <h3>{{message}}</h3>
+
+
+        <div class="col-md-12" ng-repeat="c in eque |orderBy:'id'">
+
+
+            <h5 align="">
+                {{c.id}} {{ c.name }}{{ c.description }}
+            </h5>
+
+            <hr>
+        </div>
+
+
+    </div>
+
+</div>
+
