@@ -19,8 +19,3 @@ infoApp.config(function ($routeProvider) {
         .otherwise({redirectTo: '/'});
 });
 
-// infoApp.run(function ($localStorage, $rootScope, LoginService, $location) {
-//     if ($localStorage.currentUser == undefined) {
-//         $localStorage.currentUser = null;
-//     }
-// });
