@@ -43,7 +43,7 @@ public class Equipment {
         this.id = id;
     }
 
-    public String getName() {
+    public String getName(String name) {
         return name;
     }
 
@@ -51,9 +51,7 @@ public class Equipment {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
-    }
+
 
     public void setDescription(String description) {
         this.description = description;
@@ -66,4 +64,15 @@ public class Equipment {
     public void setImage(byte[] image) {
         this.image = image;
     }
+
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+
 }

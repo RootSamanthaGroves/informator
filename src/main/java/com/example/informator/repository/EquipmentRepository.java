@@ -32,11 +32,14 @@ public class EquipmentRepository {
         return e;
     }
 
-//    @Transactional
-//    public Equipment findByName(String name) {
-//        Equipment e = entityManager.find(Equipment.class, name);
-//        return e;
-//    }
+    public Equipment findByName(String name) {
+        TypedQuery<Equipment> query = entityManager.createQuery("select u from Equipment u where u.name = :name", Equipment.class);
+        query.setParameter("name", name);
+        List<Equipment> userList = query.getResultList();
+        if (userList.isEmpty())
+            return null;
+        return userList.get(0);
+    }
 
 
     public List<Equipment> findAll() {

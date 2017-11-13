@@ -32,23 +32,28 @@ public class EquipmentController {
     @GetMapping("/id/{id}")
     public ResponseEntity getById(@PathVariable long id) {
         Equipment equipment =equipmentRepository.findOne(id);
-        if (equipment.equals(null))
-            return new ResponseEntity(HttpStatus.NO_CONTENT);
+//        if (equipment.equals(null))
+//            return new ResponseEntity(HttpStatus.NO_CONTENT);
         return ResponseEntity.ok(equipment);
     }
 
-//    @GetMapping("/name/{name}")
-//    public  ResponseEntity getByName(@PathVariable String name){
-//        Equipment equipment = equipmentRepository.findByName(name);
-//        if (equipment.equals(null)){
-//            return  new ResponseEntity(HttpStatus.NOT_FOUND);
-//        }
-//        else
-//        {
-//            return ResponseEntity.ok(equipment);
-//        }
-//
-//    }
+    @GetMapping("/name/{name}")
+    public  ResponseEntity<Equipment> getByName(@PathVariable String name){
+        Equipment equipment = equipmentRepository.findByName(name);
+        if (!name.isEmpty()){
+            return  new ResponseEntity(HttpStatus.NOT_FOUND);
+        }
+        else
+        {
+               return new ResponseEntity<Equipment>(equipment, new HttpHeaders(), HttpStatus.OK);
+
+        }
+
+    }
+
+
+
+
 
     @Transactional
     @PostMapping("add")
