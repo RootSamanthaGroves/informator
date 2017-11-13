@@ -35,36 +35,36 @@ public class Init {
             equipment1.setName("name");
             equipment1.setDescription("Opis");
 
-            byte[] imageInByte = new byte[0];
-            try {
-
-                BufferedImage originalImage = ImageIO.read(new File(
-                        "C:\\Users\\Dii\\Desktop\\informator\\src\\main\\resources\\static\\image\\computer.png"));
-
-
-                // convert BufferedImage to byte array
-                ByteArrayOutputStream baos = new ByteArrayOutputStream();
-                ImageIO.write(originalImage, "png", baos);
-                baos.flush();
-                imageInByte = baos.toByteArray();
-                baos.close();
-
-                // convert byte array back to BufferedImage
-                InputStream in = new ByteArrayInputStream(imageInByte);
-                BufferedImage bImageFromConvert = ImageIO.read(in);
-
-                ImageIO.write(bImageFromConvert, "png", new File(
-                        "C:\\Users\\Dii\\Desktop\\informator\\src\\main\\resources\\static\\image\\computer.png"));
-
-
-            } catch (IOException e) {
-                System.out.println(e.getMessage());
-            }
-
-
-
-
-            equipment1.setImage(imageInByte);
+//            byte[] imageInByte = new byte[0];
+//            try {
+//
+//                BufferedImage originalImage = ImageIO.read(new File(
+//                        "C:\\Users\\Dii\\Desktop\\informator\\src\\main\\resources\\static\\image\\computer.png"));
+//
+//
+//                // convert BufferedImage to byte array
+//                ByteArrayOutputStream baos = new ByteArrayOutputStream();
+//                ImageIO.write(originalImage, "png", baos);
+//                baos.flush();
+//                imageInByte = baos.toByteArray();
+//                baos.close();
+//
+//                // convert byte array back to BufferedImage
+//                InputStream in = new ByteArrayInputStream(imageInByte);
+//                BufferedImage bImageFromConvert = ImageIO.read(in);
+//
+//                ImageIO.write(bImageFromConvert, "png", new File(
+//                        "C:\\Users\\Dii\\Desktop\\informator\\src\\main\\resources\\static\\image\\computer.png"));
+//
+//
+//            } catch (IOException e) {
+//                System.out.println(e.getMessage());
+//            }
+//
+//
+//
+//
+//            equipment1.setImage(imageInByte);
 
             equipmentRepository.save(equipment1);
         }
