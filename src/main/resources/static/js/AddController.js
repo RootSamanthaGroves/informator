@@ -38,7 +38,7 @@ angular.module('infoApp').controller('AddController', function ($scope, $resourc
 
 
     // wyświetlanie aut
-    var loadAll = function () {
+   $scope.loadAll = function () {
 
         var Eque = $resource('equipment/all', {}, {
             query: {method: 'get', isArray: true, cancellable: true}
@@ -52,7 +52,7 @@ angular.module('infoApp').controller('AddController', function ($scope, $resourc
 
         });
     };
-    loadAll();
+    $scope.loadAll();
 
 
     $scope.delete = function (id) {
@@ -62,7 +62,7 @@ angular.module('infoApp').controller('AddController', function ($scope, $resourc
         }).success(function (data) {
             $scope.selectTitle = data.title;
             $scope.status = "The Survey Deleted Successfully!!!";
-            loadAll();
+            $scope.loadAll();
 
         })
             .error(function (error) {
