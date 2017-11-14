@@ -13,7 +13,7 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 @RestController
-@RequestMapping("equipment")
+@RequestMapping("/equipment")
 public class EquipmentController {
 
     @Autowired
@@ -21,10 +21,10 @@ public class EquipmentController {
 
     @GetMapping("/all")
     public ResponseEntity<?> getAll() {
-        List<Equipment> autosList =equipmentRepository.findAll();
-        if (autosList.isEmpty())
+        List<Equipment> List =equipmentRepository.findAll();
+        if (List.size()>0)
             return new ResponseEntity(HttpStatus.NO_CONTENT);
-        return ResponseEntity.ok(autosList);
+        return ResponseEntity.ok(List);
     }
 
 
@@ -56,7 +56,7 @@ public class EquipmentController {
 
 
     @Transactional
-    @PostMapping("add")
+    @PostMapping("/add")
     public ResponseEntity<Equipment> post(@RequestBody Equipment equipment) {
       equipmentRepository.save(equipment);
         if ((equipment.getId() != -1)) {
@@ -65,7 +65,7 @@ public class EquipmentController {
         return new ResponseEntity<Equipment>(HttpStatus.BAD_REQUEST);
     }
 
-    @DeleteMapping("delete/id/{id}")
+    @DeleteMapping("/delete/id/{id}")
     public ResponseEntity<Equipment> delete(@PathVariable long id) {
         //   System.out.println("AutoController.deleteAuto");
         if (id != -1) {
