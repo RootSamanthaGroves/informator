@@ -3,7 +3,7 @@ angular.module('infoApp').controller('ShowController', function ($scope,$resourc
 
 
 
-    var loadAll = function () {
+    $scope.loadAll = function () {
 
         var Eque = $resource('equipment/all', {}, {
             query: {method: 'get', isArray: true, cancellable: true}
@@ -17,5 +17,5 @@ angular.module('infoApp').controller('ShowController', function ($scope,$resourc
 
         });
     };
-    loadAll();
+    $scope.loadAll();
 });
