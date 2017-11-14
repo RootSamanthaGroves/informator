@@ -49,7 +49,7 @@ angular.module('infoApp').controller('AddController', function ($scope, $resourc
 
             // alert(response);
             $scope.eque = response; // widoku będziesz używał teraz people
-             console.log(response);
+
         });
     };
     loadAll();
