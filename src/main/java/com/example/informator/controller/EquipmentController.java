@@ -13,16 +13,16 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 @RestController
-@RequestMapping("/equipment")
+@RequestMapping("equipment")
 public class EquipmentController {
 
     @Autowired
     EquipmentRepository equipmentRepository;
 
-    @GetMapping("/all")
+    @GetMapping("all")
     public ResponseEntity<?> getAll() {
         List<Equipment> equipmentList =equipmentRepository.findAll();
-        if (equipmentList.size()>0)
+        if (equipmentList.isEmpty())
             return new ResponseEntity(HttpStatus.NO_CONTENT);
         return ResponseEntity.ok(equipmentList);
     }

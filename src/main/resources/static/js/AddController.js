@@ -25,7 +25,7 @@ angular.module('infoApp').controller('AddController', function ($scope, $resourc
 
         $http.post('/equipment/add', eqObject).success(function () { //wywloujemy
 
-            loadAll();
+            $scope.loadAll();
 
             $scope.nazwaEQ = "";
             $scope.opisEQ = "";
@@ -40,19 +40,19 @@ angular.module('infoApp').controller('AddController', function ($scope, $resourc
     // wyświetlanie aut
    $scope.loadAll = function () {
 
-        var Eque = $resource('equipment/all', {}, {
+        var Equipment = $resource('equipment/all', {}, {
             query: {method: 'get', isArray: true, cancellable: true}
 
         });
 
-        Eque.query(function (response) {
+        Equipment.query(function (response) {
 
             // alert(response);
             $scope.eque = response; // widoku będziesz używał teraz people
 
         });
     };
-    $scope.loadAll();
+     $scope.loadAll();
 
 
     $scope.delete = function (id) {
