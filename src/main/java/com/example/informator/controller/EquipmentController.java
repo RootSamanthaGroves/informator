@@ -21,10 +21,10 @@ public class EquipmentController {
 
     @GetMapping("/all")
     public ResponseEntity<?> getAll() {
-        List<Equipment> List =equipmentRepository.findAll();
-        if (List.size()>0)
+        List<Equipment> equipmentList =equipmentRepository.findAll();
+        if (equipmentList.size()>0)
             return new ResponseEntity(HttpStatus.NO_CONTENT);
-        return ResponseEntity.ok(List);
+        return ResponseEntity.ok(equipmentList);
     }
 
 
