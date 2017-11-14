@@ -43,7 +43,7 @@ public class EquipmentRepository {
 
 
     public List<Equipment> findAll() {
-        TypedQuery<Equipment> query = entityManager.createQuery("select e from Equipment e", Equipment.class);
+        TypedQuery query = entityManager.createQuery("select e from Equipment e", Equipment.class);
         return query.getResultList();
     }
 

@@ -40,7 +40,7 @@ angular.module('infoApp').controller('AddController', function ($scope, $resourc
     // wyświetlanie aut
     var loadAll = function () {
 
-        var Eque = $resource('equipment/all', {}, {
+        var Eque = $resource('/equipment/all', {}, {
             query: {method: 'get', isArray: true, cancellable: true}
 
         });
