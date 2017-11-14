@@ -1,5 +1,5 @@
 
-var infoApp = angular.module('infoApp', ['ngRoute', 'ngResource', 'ui.bootstrap', 'ngStorage']);
+var infoApp = angular.module('infoApp', ['ngRoute', 'ngResource', 'ui.bootstrap' ]);
 
 infoApp.config(function ($routeProvider) {
     $routeProvider
