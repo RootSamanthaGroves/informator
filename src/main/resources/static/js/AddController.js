@@ -14,7 +14,7 @@ angular.module('infoApp').controller('AddController', function ($scope, $resourc
             }
         }
 
-        console.log($scope.nazwaEQ, $scope.opisEQ);
+        // console.log($scope.nazwaEQ, $scope.opisEQ);
         var nn = $scope.nazwaEQ;
         var oo = $scope.opisEQ;
         var eqObject = {
