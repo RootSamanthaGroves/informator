@@ -17,7 +17,7 @@ public class Equipment {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @Size(min = 0, max = 50)
+    @Size(min = 0, max = 60)
     private String name;
 
     @Size(min = 0, max = 1000)
