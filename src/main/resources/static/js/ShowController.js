@@ -46,7 +46,7 @@ angular.module('infoApp').controller('ShowController', function ($scope,$resourc
 
         Equipment.query(function (response) {
 
-             alert(response);
+             // alert(response);
             $scope.eque = response; // widoku będziesz używał teraz people
 
         });

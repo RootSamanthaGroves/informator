@@ -33,13 +33,16 @@ public class EquipmentRepository {
     }
     @Transactional
     public Equipment findByName(String name) {
-        TypedQuery<Equipment> query = entityManager.createQuery("select u from Equipment u where u.name = :name", Equipment.class);
+        System.out.println(name);
+        TypedQuery<Equipment> query = entityManager.createQuery("select e from Equipment e where e.name = :name", Equipment.class);
         query.setParameter("name", name);
-        List<Equipment> userList = query.getResultList();
-//        if (userList.isEmpty())
-//            return null;
-        return userList.get(0);
+        List<Equipment> equipmentList = query.getResultList();
+        if (equipmentList.isEmpty())
+            return null;
+        return equipmentList.get(0);
     }
+
+
 
 @Transactional
     public List<Equipment> findAll() {
