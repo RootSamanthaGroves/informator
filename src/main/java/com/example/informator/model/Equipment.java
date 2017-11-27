@@ -17,10 +17,10 @@ public class Equipment {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @Size(min = 0, max = 60)
+    @Size(min = 0, max = 105)
     private String name;
 
-    @Size(min = 0, max = 1000)
+    @Size(min = 0, max = 2500)
     private String description;
 
     @Lob
