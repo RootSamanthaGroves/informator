@@ -1,0 +1,5 @@
+Zespół modułowych kontrolerów przemysłowych w sterowaniu rzeczywistych procesów technologicznych,"Projektowanie i aranżacja rzeczywistych układów przemysłowych z komunikacją międzyprocesorową i obsługą dedykowanych wejść-wyjść. Uniwersalne urządzenia mikroprocesorowe przeznaczone do sterowania pracą maszyn lub urządzeń technologicznych. Sterowniki wyposażone w odpowiednią liczbę układów wejściowych zbierających informacje o stanie obiektu i żądaniach obsługi oraz odpowiednią liczbę i rodzaj układów wyjściowych połączonych z elementami wykonawczymi, sygnalizacyjnymi lub transmisji danych. Dostępne języki programowania LD, IL, FB, język graficzny Graftec.
+W skład stanowiska wchodzą:
+• Przemysłowy zestaw modelowania sterownia procesów technologicznych (PLC) pracujący w trybie rzeczywistym
+• Dedykowane jednostki sterujące
+• Oprogramowanie

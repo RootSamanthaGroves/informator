@@ -1,0 +1,8 @@
+Nowej generacji kamera do ultraszybkich pomiarów sekwencji obrazów. Konstruowanie diagnostycznych systemów czasu rzeczywistego na bazie rozpoznawania i przetwarzania obrazów graficznych i termicznych. Szybka fotografia jako narzędzie inżynierskie umożliwiająca wizualizację i analizę ruchu którego ludzkie oko nie jest w stanie zauważyć lub w ogóle zdać sobie sprawy z jego istnienia. Kamery szybkie uzupełnione o specjalistyczne oprogramowanie jako urządzenia pomiarowe, umożliwiające bezstykowe pomiary przemieszczeń, prędkości i przyspieszeń, zarówno liniowych jak i kątowych. Obrazowanie termiczne z zastosowaniem kamer termowizyjnych w różnych inspekcjach instalacji elektrycznych, mechanicznych czy budowlanych ukazujące najmniejsze detale i zapewniające doskonałą dokładność pomiaru. Możliwość uniknięcia błędów koncepcyjnych w fazie wytwarzania, wysoka jakość oraz skrócony czas wprowadzenia produktu na rynek.
+W skład stanowiska wchodzą:
+• Kamera szybka (oprzyrządowanie)
+• Kamera termowizyjna (oprzyrządowanie)
+• Pojemniki do transportu i przenoszenia urządzeń
+• Statyw, reflektor oświetleniowy do szybkich pomiarów
+• Dedykowana jednostka sterująca
+• Oprogramowanie

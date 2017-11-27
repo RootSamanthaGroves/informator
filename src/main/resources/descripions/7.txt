@@ -1,0 +1,6 @@
+Stanowisko restytuowania scenerii 3D z wykorzystaniem obrazów interferencyjnych,"Wykorzystanie techniki projekcji znanej struktury światła (zazwyczaj białego) i użycie sensorów (zazwyczaj kamer CCD) do zebrania obrazu obiektu z liniami struktury projektowanej na niego. Do zbierania informacji 3D może być użyte wiele różnych struktur światła. Technika pomiaru wykorzystuje efekt zniekształcenia linii w postaci promienia światła oświetlającego powierzchnię przedmiotu. Przedmiot mierzony oświetlany jest rastrem o znanych parametrach (zestaw linii o znanej gęstości). Linie proste ulegają zniekształceniu adekwatnie do wielkości deformacji powierzchni mierzonego obiektu. Obraz oświetlonego przedmiotu, przechwytywany jest przez kamerę i analizowany w komputerze. Cały proces pozwala metodą bezinwazyjną analizować i badać obiekty różnych kształtów i wymiarów.
+W skład stanowiska wchodzą
+• Skaner 3D
+• Dedykowana jednostka sterująca
+• Oprogramowanie
+• Akcesoria

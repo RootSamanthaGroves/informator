@@ -1,0 +1,6 @@
+W zakresie badań umożliwiających analizę i identyfikację sygnałów biometrycznych zdecydowano, że to zadanie badawcze może być z powodzeniem realizowane z wykorzystaniem wieloprocesowego systemu do analizy i obliczeń równoległych opartego na nowoczesnym wzmacniaczu napięć bioelektrycznych z dedykowanym analizatorem cyfrowym. W proponowanej wersji stanowisko to obejmuje w swoich zadaniach badawczych funkcje, macierzy wieloprocesorowej, komputera klasy PC, oprogramowania biurowo-obliczeniowego.
+W skład stanowiska wchodzą:
+• Zintegrowany system do rejestracji i analizy sygnałów biometrycznych
+• Akcesoria
+• Dedykowana jednostka sterująca
+• Oprogramowanie SDK

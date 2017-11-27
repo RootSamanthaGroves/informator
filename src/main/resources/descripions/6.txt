@@ -1,0 +1,5 @@
+Stanowisko wieloprocesorowego systemu klasyfikacji i analizy sygnałów fizycznych czasu rzeczywistego.,"Wykorzystanie istniejących rozwiązań systemowych pracujących w czasie rzeczywistym i spełniających funkcje monitorująco-diagnostyczne. Prezentacja widma częstotliwościowego danej wielkości fizycznej zmiennej w czasie, szczególnie widma sygnału elektrycznego. Analiza widma sygnałów elektrycznych, ich częstotliwości dominującej, mocy, zniekształceń harmonicznych, przepustowości i innych składników widmowych sygnału pod kątem oceny i diagnostyki charakterystyk urządzeń elektronicznych. W skład stanowiska wchodzą
+• Skaner 3D
+• Dedykowana jednostka sterująca
+• Oprogramowanie
+• Akcesoria

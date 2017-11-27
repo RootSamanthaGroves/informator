@@ -7,15 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
-import javax.imageio.ImageIO;
 
-import java.awt.*;
-import java.awt.image.BufferedImage;
 import java.io.*;
-import java.net.URISyntaxException;
-import java.util.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 
 @Component
@@ -37,6 +30,7 @@ public class Init {
             Equipment equ;
             String n = "";
             String d = "";
+            int i =1;
             try {
                 String textLine = bufferedReader.readLine();
                 while (textLine != null && textLine.length() > 0) {
@@ -50,10 +44,33 @@ public class Init {
 
                     equ = new Equipment();
                     equ.setName(n);
-//                equ.setDescription(d);
+
+                    String everything = "";
+
+                    System.out.println("/descripions/"+i+".txt");
+                    BufferedReader br = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("/descripions/"+i+".txt")));
+
+
+                    try {
+                        StringBuilder sb = new StringBuilder();
+                        String line = br.readLine();
+
+                        while (line != null) {
+                            sb.append(line);
+                            sb.append(System.lineSeparator());
+                            line = br.readLine();
+                        }
+                        everything = sb.toString();
+                        System.out.println(everything);
+                    } finally {
+                        br.close();
+                    }
+//                    byte[] bytes = everything.getBytes();
+                equ.setDescription(everything);
 
 
                     equipmentRepository.save(equ);
+                    i++;
                     textLine = bufferedReader.readLine();
                 }
             } catch (IOException e) {
@@ -68,6 +85,7 @@ public class Init {
 
 
         }
+
 
 
     }

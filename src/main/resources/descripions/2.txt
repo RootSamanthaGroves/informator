@@ -1,0 +1,5 @@
+Zestaw do prowadzenia badań Human-Computer- Interaction Rozwój systemów eye trackingowych oraz zastosowana technika pomiarów w podczerwieni obserwowanej sceny pozwala zarówno prowadzić badania okulograficzne, badania wybranych form aktywności mózgowej ale również analizę morfologii obrazu tęczówki w wysokiej rozdzielczości. Zadania analizy daktyloskopijnej będą realizowane z wykorzystaniem algorytmów opracowanych już przez pracowników naukowych wnioskujących o to stanowisko badawcze i będą stanowiły jego integralne uzupełnienie. Zestaw do badań interakcji człowiek komputer łączył będzie w sobie zadania identyfikacji biometrycznej, rozwijania algorytmów śledzących wykorzystywanych w systemach wizyjnych oraz zasadniczą funkcjonalność jaką jest moduł eye-trackingowy. Proponowane stanowisko badawcze przejmować będzie w swoich zadaniach badawczych funkcje systemu do prowadzenia badań Human Computer Interaction, skanera tęczówki, komputera klasy PC, skanera obrazów daktyloskopowych.
+W skład stanowiska wchodzą:
+• Zintegrowany system śledzenia ruchu gałek ocznych - Eye-Tracker
+• Dedykowana jednostka sterująca
+• Oprogramowanie SMI Eyetracking
