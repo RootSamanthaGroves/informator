@@ -29,18 +29,14 @@ public class Init {
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("/equipmentdata.csv")));
             Equipment equ;
             String n = "";
-            String d = "";
+
             int i =1;
             try {
                 String textLine = bufferedReader.readLine();
                 while (textLine != null && textLine.length() > 0) {
                     int index1 = textLine.indexOf(",");
-//                       int index2 = textLine.indexOf(\"");
                     System.out.println(index1);
                     n = textLine.substring(index1 + 1);
-//                d = textLine.substring(index2, textLine.length());
-//                System.out.println(n);
-//               System.out.println(d);
 
                     equ = new Equipment();
                     equ.setName(n);
@@ -65,7 +61,7 @@ public class Init {
                     } finally {
                         br.close();
                     }
-//                    byte[] bytes = everything.getBytes();
+                    byte[] bytes = everything.getBytes();
                 equ.setDescription(everything);
 
 
