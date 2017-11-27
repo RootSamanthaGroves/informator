@@ -7,7 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
+import javax.imageio.ImageIO;
 
+import java.awt.image.BufferedImage;
 import java.io.*;
 
 
@@ -25,12 +27,11 @@ public class Init {
         if (equipment == null) {
 
 
-
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("/equipmentdata.csv")));
             Equipment equ;
             String n = "";
 
-            int i =1;
+            int i = 1;
             try {
                 String textLine = bufferedReader.readLine();
                 while (textLine != null && textLine.length() > 0) {
@@ -43,7 +44,8 @@ public class Init {
 
                     String everything = "";
 
-                    System.out.println("/descripions/"+i+".txt");
+                    System.out.println("/descripions/" + i + ".txt");
+
                     BufferedReader br = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("/descripions/"+i+".txt")));
 
 
@@ -62,10 +64,33 @@ public class Init {
                         br.close();
                     }
                     byte[] bytes = everything.getBytes();
-                equ.setDescription(everything);
+                    equ.setDescription(everything);
 
 
+
+                    try {
+//                        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("/equipmentdata.csv")));
+//                        URL url = getClass().getResource("./image/1.png");
+//                        File file = new File();
+                        File directory = new File("./");
+                        System.out.println(directory.getAbsolutePath());
+                        BufferedImage originalImage =
+                                ImageIO.read(new File("image/"+i+".png"));
+
+                        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                        ImageIO.write(originalImage, "png", baos);
+                        baos.flush();
+                        byte[] imageInByte = baos.toByteArray();
+                        equ.setImage(imageInByte);
+                        baos.close();
+
+                    } catch (IOException e) {
+                        System.out.println(e.getMessage());
+                    }
+                        equ.setDescription(everything);
                     equipmentRepository.save(equ);
+
+
                     i++;
                     textLine = bufferedReader.readLine();
                 }
@@ -81,7 +106,6 @@ public class Init {
 
 
         }
-
 
 
     }
